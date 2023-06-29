@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	
 
 	"github.com/RipulHandoo/jwt/internal/database"
 	_ "github.com/golang-jwt/jwt/v5"
@@ -121,6 +120,8 @@ func login(w http.ResponseWriter, r *http.Request){
 	ResponseWithJson(w,200,user)
 
 }
+
+
 
 func HandleUserLogout(w http.ResponseWriter, req *http.Request, user database.Jwtuser) {
 	//clear cookie
